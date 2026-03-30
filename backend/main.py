@@ -7,9 +7,9 @@ import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
-#load_dotenv()
+load_dotenv()
 app = FastAPI()
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
+#load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 # Allow frontend apps like Streamlit to call the API
 app.add_middleware(
     CORSMiddleware,
@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 # Load API key
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 
 
 # ------------------------------
