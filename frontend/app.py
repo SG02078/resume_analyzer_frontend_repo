@@ -3,7 +3,7 @@ import requests
 import time
 import os
 #BACKEND_URL = os.environ.get("BACKEND_URL")
-BACKEND_URL="https://resume-analyzer-production-65fc.up.railway.app"
+BACKEND_URL="https://resume-analyzer-production-6248.up.railway.app/"
 
 st.title("AI Resume Analyzer")
 
